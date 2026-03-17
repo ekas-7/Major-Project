@@ -15,15 +15,16 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY pipeline_b.py .
+COPY dataset.rar .
 
-VOLUME ["/data", "/metrics"]
+VOLUME ["/metrics"]
 
 ENV PIPELINE_NAME="Container_B_Advanced"
 ENV EPOCHS="15"
 ENV BATCH_SIZE="16"
 ENV K_FOLDS="5"
-ENV DATASET_DIR="/data/cp_dataset"
-ENV RAR_PATH="/data/dataset.rar"
+ENV DATASET_DIR="/app/cp_dataset"
+ENV RAR_PATH="/app/dataset.rar"
 ENV OUTPUT_FILE="/metrics/container_b_results.json"
 
 CMD ["python", "pipeline_b.py"]

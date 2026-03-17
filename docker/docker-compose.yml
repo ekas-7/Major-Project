@@ -3,7 +3,6 @@ services:
     build:
       context: ./container-a
     volumes:
-      - ../dataset.rar:/data/dataset.rar:ro
       - ../metrics:/metrics
     environment:
       - PIPELINE_NAME=Container_A_Lightweight
@@ -15,7 +14,6 @@ services:
     build:
       context: ./container-b
     volumes:
-      - ../dataset.rar:/data/dataset.rar:ro
       - ../metrics:/metrics
     environment:
       - PIPELINE_NAME=Container_B_Advanced

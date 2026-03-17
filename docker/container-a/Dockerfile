@@ -15,14 +15,15 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY pipeline_a.py .
+COPY dataset.rar .
 
-VOLUME ["/data", "/metrics"]
+VOLUME ["/metrics"]
 
 ENV PIPELINE_NAME="Container_A_Lightweight"
 ENV EPOCHS="10"
 ENV BATCH_SIZE="16"
-ENV DATASET_DIR="/data/cp_dataset"
-ENV RAR_PATH="/data/dataset.rar"
+ENV DATASET_DIR="/app/cp_dataset"
+ENV RAR_PATH="/app/dataset.rar"
 ENV OUTPUT_FILE="/metrics/container_a_results.json"
 
 CMD ["python", "pipeline_a.py"]
