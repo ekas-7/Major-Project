@@ -33,9 +33,8 @@ def extract_dataset():
         return
     os.makedirs(DATASET_DIR, exist_ok=True)
     print(f"Extracting {RAR_PATH} -> {DATASET_DIR}")
-    import rarfile
-    with rarfile.RarFile(RAR_PATH) as rf:
-        rf.extractall(DATASET_DIR)
+    import patoolib
+    patoolib.extract_archive(RAR_PATH, outdir=DATASET_DIR)
     print("Extraction complete.")
 
 
