@@ -1,0 +1,27 @@
+version: "3.9"
+
+services:
+  container-a:
+    build:
+      context: ./container-a
+    volumes:
+      - ../CP-AnemiC dataset.rar:/data/dataset.rar:ro
+      - ../metrics:/metrics
+    environment:
+      - PIPELINE_NAME=Container_A_Lightweight
+      - EPOCHS=10
+      - BATCH_SIZE=16
+    restart: "no"
+
+  container-b:
+    build:
+      context: ./container-b
+    volumes:
+      - ../CP-AnemiC dataset.rar:/data/dataset.rar:ro
+      - ../metrics:/metrics
+    environment:
+      - PIPELINE_NAME=Container_B_Advanced
+      - EPOCHS=15
+      - BATCH_SIZE=16
+      - K_FOLDS=5
+    restart: "no"

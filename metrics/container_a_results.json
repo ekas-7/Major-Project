@@ -1,0 +1,47 @@
+{
+  "container": "Container_A_Lightweight",
+  "pipeline": "lightweight",
+  "preprocessing": {
+    "clahe": false,
+    "colorspace": "RGB",
+    "se_blocks": false
+  },
+  "training": {
+    "strategy": "train_test_split",
+    "test_size": 0.2,
+    "epochs": 10,
+    "early_stopping": false
+  },
+  "completed_at": "2026-03-17T10:00:00Z",
+  "dataset": {
+    "total_images": 710,
+    "anemic": 424,
+    "healthy": 286
+  },
+  "results": [
+    {
+      "model": "RGB_Intensity",
+      "accuracy": 0.5915,
+      "auc": 0.5085,
+      "recall": 0.9878,
+      "inference_time_ms": 0.82,
+      "cpu_util_pct": 45.2
+    },
+    {
+      "model": "MobileNetV2",
+      "accuracy": 0.6338,
+      "auc": 0.5841,
+      "recall": 0.8462,
+      "inference_time_ms": 38.4,
+      "cpu_util_pct": 62.1
+    },
+    {
+      "model": "ResNet50",
+      "accuracy": 0.6197,
+      "auc": 0.5496,
+      "recall": 1.0000,
+      "inference_time_ms": 210.3,
+      "cpu_util_pct": 74.8
+    }
+  ]
+}

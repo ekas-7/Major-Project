@@ -1,0 +1,68 @@
+{
+  "container": "Container_B_Advanced",
+  "pipeline": "advanced",
+  "preprocessing": {
+    "clahe": true,
+    "colorspace": "CIELAB",
+    "se_blocks": true
+  },
+  "training": {
+    "strategy": "kfold",
+    "k": 5,
+    "epochs": 15,
+    "early_stopping": true
+  },
+  "completed_at": "2026-03-17T10:45:00Z",
+  "dataset": {
+    "total_images": 710,
+    "anemic": 424,
+    "healthy": 286
+  },
+  "results": [
+    {
+      "model": "LAB_Intensity_Baseline",
+      "accuracy": 0.5972,
+      "auc": 0.5006,
+      "recall": 0.9949,
+      "inference_time_ms": 1.17,
+      "cpu_util_pct": 90.86,
+      "fold_details": [
+        {"fold": 1, "accuracy": 0.6549, "auc": 0.5000, "recall": 1.0000, "inference_time_ms": 0.98, "cpu_util_pct": 92.1},
+        {"fold": 2, "accuracy": 0.6408, "auc": 0.5000, "recall": 1.0000, "inference_time_ms": 1.02, "cpu_util_pct": 89.4},
+        {"fold": 3, "accuracy": 0.5704, "auc": 0.4939, "recall": 0.9878, "inference_time_ms": 1.21, "cpu_util_pct": 91.2},
+        {"fold": 4, "accuracy": 0.5282, "auc": 0.5008, "recall": 0.9867, "inference_time_ms": 1.31, "cpu_util_pct": 93.0},
+        {"fold": 5, "accuracy": 0.5915, "auc": 0.5085, "recall": 1.0000, "inference_time_ms": 1.33, "cpu_util_pct": 88.6}
+      ]
+    },
+    {
+      "model": "ResNet50_SE",
+      "accuracy": 0.5972,
+      "auc": 0.5496,
+      "recall": 1.0000,
+      "inference_time_ms": 452.52,
+      "cpu_util_pct": 77.26,
+      "fold_details": [
+        {"fold": 1, "accuracy": 0.6549, "auc": 0.5036, "recall": 1.0000, "inference_time_ms": 440.1, "cpu_util_pct": 76.2},
+        {"fold": 2, "accuracy": 0.6408, "auc": 0.5841, "recall": 1.0000, "inference_time_ms": 455.8, "cpu_util_pct": 78.1},
+        {"fold": 3, "accuracy": 0.5775, "auc": 0.5020, "recall": 1.0000, "inference_time_ms": 448.2, "cpu_util_pct": 79.3},
+        {"fold": 4, "accuracy": 0.5282, "auc": 0.6273, "recall": 1.0000, "inference_time_ms": 462.4, "cpu_util_pct": 75.8},
+        {"fold": 5, "accuracy": 0.5845, "auc": 0.5311, "recall": 1.0000, "inference_time_ms": 456.1, "cpu_util_pct": 76.9}
+      ]
+    },
+    {
+      "model": "DenseNet121_SE",
+      "accuracy": 0.7225,
+      "auc": 0.7735,
+      "recall": 0.7936,
+      "inference_time_ms": 903.73,
+      "cpu_util_pct": 86.18,
+      "fold_details": [
+        {"fold": 1, "accuracy": 0.7958, "auc": 0.8126, "recall": 0.8065, "inference_time_ms": 920.3, "cpu_util_pct": 85.2},
+        {"fold": 2, "accuracy": 0.7254, "auc": 0.7722, "recall": 0.8462, "inference_time_ms": 898.6, "cpu_util_pct": 88.1},
+        {"fold": 3, "accuracy": 0.7676, "auc": 0.8063, "recall": 0.7927, "inference_time_ms": 901.2, "cpu_util_pct": 87.4},
+        {"fold": 4, "accuracy": 0.6549, "auc": 0.7397, "recall": 0.8000, "inference_time_ms": 895.8, "cpu_util_pct": 84.6},
+        {"fold": 5, "accuracy": 0.6690, "auc": 0.7368, "recall": 0.7229, "inference_time_ms": 903.7, "cpu_util_pct": 85.5}
+      ]
+    }
+  ]
+}
