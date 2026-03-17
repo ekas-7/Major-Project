@@ -12,7 +12,7 @@
     "epochs": 10,
     "early_stopping": false
   },
-  "completed_at": "2026-03-17T10:00:00Z",
+  "completed_at": "2026-03-17T18:31:20.415992Z",
   "dataset": {
     "total_images": 710,
     "anemic": 424,
@@ -21,27 +21,27 @@
   "results": [
     {
       "model": "RGB_Intensity",
-      "accuracy": 0.5915,
-      "auc": 0.5085,
-      "recall": 0.9878,
-      "inference_time_ms": 0.82,
-      "cpu_util_pct": 45.2
+      "accuracy": 0.4225,
+      "auc": 0.5391,
+      "recall": 0.2471,
+      "inference_time_ms": 0.11,
+      "cpu_util_pct": 61.0
     },
     {
       "model": "MobileNetV2",
-      "accuracy": 0.6338,
-      "auc": 0.5841,
-      "recall": 0.8462,
-      "inference_time_ms": 38.4,
-      "cpu_util_pct": 62.1
+      "accuracy": 0.7324,
+      "auc": 0.7587,
+      "recall": 0.8824,
+      "inference_time_ms": 70.29,
+      "cpu_util_pct": 209.4
     },
     {
       "model": "ResNet50",
-      "accuracy": 0.6197,
-      "auc": 0.5496,
-      "recall": 1.0000,
-      "inference_time_ms": 210.3,
-      "cpu_util_pct": 74.8
+      "accuracy": 0.6268,
+      "auc": 0.5748,
+      "recall": 1.0,
+      "inference_time_ms": 219.73,
+      "cpu_util_pct": 228.0
     }
   ]
 }
